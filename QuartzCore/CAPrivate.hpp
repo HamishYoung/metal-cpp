@@ -75,7 +75,9 @@ namespace Private
 {
     namespace Class
     {
+        _CA_PRIVATE_DEF_CLS(CADisplayLink);
         _CA_PRIVATE_DEF_CLS(CAMetalLayer);
+        _CA_PRIVATE_DEF_CLS(CAMetalDisplayLink);
     } // Class
 } // Private
 } // CA
@@ -103,32 +105,66 @@ namespace Private
 {
     namespace Selector
     {
+        _CA_PRIVATE_DEF_SEL(addToRunLoop_forMode_,
+            "addToRunLoop:forMode:");
         _CA_PRIVATE_DEF_SEL(allowsNextDrawableTimeout,
             "allowsNextDrawableTimeout");
         _CA_PRIVATE_DEF_SEL(colorspace,
             "colorspace");
+        _CA_PRIVATE_DEF_SEL(dealloc,
+                "dealloc");
+        _CA_PRIVATE_DEF_SEL(delegate,
+            "delegate");
+        _CA_PRIVATE_DEF_SEL(developerHUDProperties,
+            "developerHUDProperties");
         _CA_PRIVATE_DEF_SEL(device,
             "device");
+        _CA_PRIVATE_DEF_SEL(displayLinkWithTarget_selector_,
+            "displayLinkWithTarget:selector:");
         _CA_PRIVATE_DEF_SEL(displaySyncEnabled,
             "displaySyncEnabled");
+        _CA_PRIVATE_DEF_SEL(drawable,
+            "drawable");
         _CA_PRIVATE_DEF_SEL(drawableSize,
             "drawableSize");
+        _CA_PRIVATE_DEF_SEL(duration,
+            "duration");
         _CA_PRIVATE_DEF_SEL(framebufferOnly,
             "framebufferOnly");
+        _CA_PRIVATE_DEF_SEL(handleDisplayLink_,
+            "handleDisplayLink:");
+        _CA_PRIVATE_DEF_SEL(initWithMetalLayer_,
+            "initWithMetalLayer:");
+        _CA_PRIVATE_DEF_SEL(invalidate,
+            "invalidate");
+        _CA_PRIVATE_DEF_SEL(isPaused,
+            "isPaused");
         _CA_PRIVATE_DEF_SEL(layer,
             "layer");
         _CA_PRIVATE_DEF_SEL(maximumDrawableCount,
             "maximumDrawableCount");
+        _CA_PRIVATE_DEF_SEL(metalDisplayLink_needsUpdate_,
+            "metalDisplayLink:needsUpdate:");
         _CA_PRIVATE_DEF_SEL(nextDrawable,
             "nextDrawable");
         _CA_PRIVATE_DEF_SEL(pixelFormat,
             "pixelFormat");
+        _CA_PRIVATE_DEF_SEL(preferredFrameLatency,
+            "preferredFrameLatency");
+        _CA_PRIVATE_DEF_SEL(preferredFrameRateRange,
+            "preferredFrameRateRange");
+        _CA_PRIVATE_DEF_SEL(removeFromRunLoop_forMode_,
+            "removeFromRunLoop:forMode:");
         _CA_PRIVATE_DEF_SEL(residencySet,
             "residencySet");
         _CA_PRIVATE_DEF_SEL(setAllowsNextDrawableTimeout_,
             "setAllowsNextDrawableTimeout:");
         _CA_PRIVATE_DEF_SEL(setColorspace_,
             "setColorspace:");
+        _CA_PRIVATE_DEF_SEL(setDelegate_,
+            "setDelegate:");
+        _CA_PRIVATE_DEF_SEL(setDeveloperHUDProperties_,
+            "setDeveloperHUDProperties:");
         _CA_PRIVATE_DEF_SEL(setDevice_,
             "setDevice:");
         _CA_PRIVATE_DEF_SEL(setDisplaySyncEnabled_,
@@ -139,12 +175,24 @@ namespace Private
             "setFramebufferOnly:");
         _CA_PRIVATE_DEF_SEL(setMaximumDrawableCount_,
             "setMaximumDrawableCount:");
+        _CA_PRIVATE_DEF_SEL(setPaused_,
+            "setPaused:");
         _CA_PRIVATE_DEF_SEL(setPixelFormat_,
             "setPixelFormat:");
+        _CA_PRIVATE_DEF_SEL(setPreferredFrameLatency_,
+            "setPreferredFrameLatency:");
+        _CA_PRIVATE_DEF_SEL(setPreferredFrameRateRange_,
+            "setPreferredFrameRateRange:");
         _CA_PRIVATE_DEF_SEL(setWantsExtendedDynamicRangeContent_,
             "setWantsExtendedDynamicRangeContent:");
+        _CA_PRIVATE_DEF_SEL(targetPresentationTimestamp,
+            "targetPresentationTimestamp");
+        _CA_PRIVATE_DEF_SEL(targetTimestamp,
+            "targetTimestamp");
         _CA_PRIVATE_DEF_SEL(texture,
             "texture");
+        _CA_PRIVATE_DEF_SEL(timestamp,
+            "timestamp");
         _CA_PRIVATE_DEF_SEL(wantsExtendedDynamicRangeContent,
             "wantsExtendedDynamicRangeContent");
     } // Class

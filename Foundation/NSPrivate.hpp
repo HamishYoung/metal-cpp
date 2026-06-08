@@ -105,6 +105,7 @@ namespace Private
         _NS_PRIVATE_DEF_CLS(NSNumber);
         _NS_PRIVATE_DEF_CLS(NSObject);
         _NS_PRIVATE_DEF_CLS(NSProcessInfo);
+        _NS_PRIVATE_DEF_CLS(NSRunLoop);
         _NS_PRIVATE_DEF_CLS(NSSet);
         _NS_PRIVATE_DEF_CLS(NSString);
         _NS_PRIVATE_DEF_CLS(NSURL);
@@ -204,6 +205,10 @@ namespace Private
             "copy");
         _NS_PRIVATE_DEF_SEL(count,
             "count");
+        _NS_PRIVATE_DEF_SEL(currentMode,
+            "currentMode");
+        _NS_PRIVATE_DEF_SEL(currentRunLoop,
+            "currentRunLoop");
         _NS_PRIVATE_DEF_SEL(dateWithTimeIntervalSinceNow_,
             "dateWithTimeIntervalSinceNow:");
         _NS_PRIVATE_DEF_SEL(defaultCenter,
@@ -368,6 +373,8 @@ namespace Private
             "longLongValue");
         _NS_PRIVATE_DEF_SEL(mainBundle,
             "mainBundle");
+        _NS_PRIVATE_DEF_SEL(mainRunLoop,
+            "mainRunLoop");
         _NS_PRIVATE_DEF_SEL(maximumLengthOfBytesUsingEncoding_,
             "maximumLengthOfBytesUsingEncoding:");
         _NS_PRIVATE_DEF_SEL(methodSignatureForSelector_,
@@ -464,6 +471,8 @@ namespace Private
             "setAutomaticTerminationSupportEnabled:");
         _NS_PRIVATE_DEF_SEL(setProcessName_,
             "setProcessName:");
+        _NS_PRIVATE_DEF_SEL(setValue_forKey_,
+            "setValue:forKey:");
         _NS_PRIVATE_DEF_SEL(sharedFrameworksPath,
             "sharedFrameworksPath");
         _NS_PRIVATE_DEF_SEL(sharedFrameworksURL,
@@ -516,6 +525,8 @@ namespace Private
             "userName");
         _NS_PRIVATE_DEF_SEL(UTF8String,
             "UTF8String");
+        _NS_PRIVATE_DEF_SEL(valueForKey_,
+            "valueForKey:");
         _NS_PRIVATE_DEF_SEL(valueWithBytes_objCType_,
             "valueWithBytes:objCType:");
         _NS_PRIVATE_DEF_SEL(valueWithPointer_,

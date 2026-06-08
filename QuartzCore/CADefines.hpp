@@ -38,4 +38,6 @@
 #define _CA_VALIDATE_SIZE(ns, name) _NS_VALIDATE_SIZE(ns, name)
 #define _CA_VALIDATE_ENUM(ns, name) _NS_VALIDATE_ENUM(ns, name)
 
+#define _CA_DELEGATE_ASSOCIATION_KEY _NS_DELEGATE_ASSOCIATION_KEY
+
 //-------------------------------------------------------------------------------------------------------------------------------------------------------------
