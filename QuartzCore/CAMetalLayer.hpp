@@ -73,6 +73,9 @@ public:
     void                     setWantsExtendedDynamicRangeContent(bool wantsExtendedDynamicRangeContent);
 
     MTL::ResidencySet*       residencySet() const;
+
+    NS::Dictionary*          developerHUDProperties() const;
+    void                     setDeveloperHUDProperties(const NS::Dictionary* developerHUDProperties);
 };
 } // namespace CA
 
@@ -231,4 +234,19 @@ _CA_INLINE void CA::MetalLayer::setWantsExtendedDynamicRangeContent(bool wantsEx
 _CA_INLINE MTL::ResidencySet* CA::MetalLayer::residencySet() const
 {
     return Object::sendMessage<MTL::ResidencySet*>(this, _CA_PRIVATE_SEL(residencySet) );
+}
+
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+_CA_INLINE NS::Dictionary* CA::MetalLayer::developerHUDProperties() const
+{
+    return Object::sendMessage<NS::Dictionary*>(this, _CA_PRIVATE_SEL(developerHUDProperties));
+}
+
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+_CA_INLINE void CA::MetalLayer::setDeveloperHUDProperties(const NS::Dictionary* const developerHUDProperties)
+{
+    return Object::sendMessage<void>(this, _CA_PRIVATE_SEL(setDeveloperHUDProperties_),
+        developerHUDProperties->copy());
 }

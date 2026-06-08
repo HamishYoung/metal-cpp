@@ -42,4 +42,6 @@
 #define _NS_VALIDATE_SIZE(ns, name) static_assert(sizeof(ns::name) == sizeof(ns##name), "size mismatch " #ns "::" #name)
 #define _NS_VALIDATE_ENUM(ns, name) static_assert(_NS_CAST_TO_UINT(ns::name) == _NS_CAST_TO_UINT(ns##name), "value mismatch " #ns "::" #name)
 
+#define _NS_DELEGATE_ASSOCIATION_KEY "delegate_value_ptr"
+
 //-------------------------------------------------------------------------------------------------------------------------------------------------------------

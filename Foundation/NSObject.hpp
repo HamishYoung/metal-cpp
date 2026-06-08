@@ -65,6 +65,9 @@ public:
     UInteger      hash() const;
     bool          isEqual(const Object* pObject) const;
 
+    Object*       value(const class String* pKey) const;
+    void          setValue(const Object* pValue, const class String* pKey);
+
     class String* description() const;
     class String* debugDescription() const;
 
@@ -283,6 +286,20 @@ _NS_INLINE NS::UInteger NS::Object::hash() const
 _NS_INLINE bool NS::Object::isEqual(const Object* pObject) const
 {
     return sendMessage<bool>(this, _NS_PRIVATE_SEL(isEqual_), pObject);
+}
+
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+_NS_INLINE NS::Object* NS::Object::value(const NS::String* pKey) const
+{
+    return sendMessage<Object*>(this, _NS_PRIVATE_SEL(valueForKey_), pKey);
+}
+
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+_NS_INLINE void NS::Object::setValue(const Object* pValue, const NS::String* pKey)
+{
+    sendMessage<void>(this, _NS_PRIVATE_SEL(setValue_forKey_), pValue, pKey);
 }
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------------------
